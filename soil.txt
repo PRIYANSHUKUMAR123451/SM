@@ -1,0 +1,24 @@
+#define SoilSensor1 A0
+#define greenLED 6
+#define redLED 7
+#define yellowLED 8
+int goodMoisture=250;
+void setup(){
+ pinMode(greenLED,OUTPUT);
+ pinMode(yellowLED,OUTPUT);
+ pinMode(redLED,OUTPUT);
+ Serial.begin(9600);
+ }
+void loop(){
+ int sensorValue1=analogRead(SoilSensor1);
+ Serial.print("Sensor 1= ");
+ Serial.print(sensorValue1);
+ if(sensorValue1>=goodMoisture){
+ digitalWrite(greenLED,HIGH);
+ digitalWrite(redLED,LOW);
+ }
+ else{
+ digitalWrite(greenLED,LOW);
+ digitalWrite(redLED,HIGH);
+ }
+ delay(2000);}
