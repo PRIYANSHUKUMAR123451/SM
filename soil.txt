@@ -21,4 +21,4 @@ void loop(){
  digitalWrite(greenLED,LOW);
  digitalWrite(redLED,HIGH);
  }
- delay(2000);}
+ delay(2000);}//by priyanshukumarggu
